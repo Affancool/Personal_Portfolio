@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        #names{
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        #page{
+            background-image: url('bg.webp');
+            box-sizing: border-box;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+        p{
+            /* background-color:rgb(4, 207, 207); */
+            color: white;
+        }
+        .details{
+            /* background-color: rgb(43, 42, 42); */
+            display: none;
+        }
+    </style>
+    <script>
+        function displayDescription(){
+            event.stopPropagation();
+
+            // Get all details divs and hide them
+            const allDetails = document.querySelectorAll('.details');
+            allDetails.forEach(detail => detail.style.display = 'none');
+
+            // Toggle display of the clicked project's description
+            const currentDetails = event.target.querySelector('.details');
+            if (currentDetails) {
+                const isVisible = currentDetails.style.display === 'block';
+                currentDetails.style.display = isVisible ? 'none' : 'block';
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="page">
+        <ol float="left" id="names" onclick="displayDescription()">
+            <div class="description">
+                <h3><u><i>Android Based Projects <h6>Click on any project for description and link</h6></i></u></h3>
+                <p>
+                    These are some of my apps which are based on Android. This includes some of the apps that are requested 
+                    by the users and one app is based on Machine Learning, while some of them are simple Android based Games. These 
+                    games cover wide range of programming concepts from simple java programming to advanced java features.
+                </p>
+            </div>
+            <li>Hostel Assist
+                <br>
+                <br>
+                <div class="details">
+                    This is an Android Application that is developed to address the greivances of hostel students. Students can
+                    raise their complaints to their respective warden using this app. Wardens can address the complaints by taking 
+                    appropriate action. It uses Google Firebase for its backend management.
+                </div>
+            </li>
+            <li>Heart Disease Detector
+                <br>
+                <br>
+                <div class="details">
+                    This is an Android application that collects data from users and determines whether the user has Coronary
+                    Disease. This app employs a Machine Learning model which was trained to predict the heart disease using 
+                    existing dataset. The model was deployed to android based app using a Tensorflow Keras Model.
+                </div>
+            </li>
+            <li>Hangman Game
+                <br>
+                <br>
+                <div class="details">
+                    This is an android game that covers wide range of programming concepts. This game is developed using Android 
+                    Studio and it includes various modes for playing.
+                </div>
+            </li>
+            <li>Guess the Song - Game
+                <br>
+                <br>
+                <div class="details">
+                    This is an android game that covers the concepts of audio and video playing in Android.
+                </div>
+            </li>
+            <li>Haunted Mansion - Interactive Story
+                <br>
+                <br>
+                <div class="details">
+                    Delve into this interactive story gaming where the outcome can vary tremendously based on your choices.
+                    Join this journey to uncover the secret behind the Haunted Mansion.
+                </div>
+            </li>
+            <li>Tic Tac Toe Game
+                <br>
+                <br>
+                <div class="details">
+                    This is a simple two player game that covers basic programming skills.
+                </div>
+            </li>
+            <hr>
+            <div class="description">
+                <h3><u><i>Java Based Projects</i></u></h3>
+                <p>
+                    These are the projects that are created using Java Swing, AWT and JavaFX. This includes prototypes of several
+                    web-based systems. It also includes a prototype for an ERP system. One project also covers the application of design
+                    patterns for a particular application. This also covers test automation using Selenium Web Drivers and it also 
+                    contains some basic to advanced programming problems.
+                </p>
+            </div>
+            <li>Travels and Tourism Management
+                <br>
+                <br>
+                <div class="details">
+                    This is a prototype for managing the travels and tourism management based on Java. This covers various java 
+                    programming concepts including JDBC and Swing.
+                </div>
+            </li>
+            <li>Eco-Collect: Online Scrap Collection Platform
+                <br>
+                <br>
+                <div class="details">
+                    This is a prototype for Online Scrap Collection Platform based on Java. This covers various java 
+                    programming concepts including JDBC and Swing.
+                </div>
+            </li>
+            <li>Inventory Management System
+                <br>
+                <br>
+                <div class="details">
+                    This is a prototype for an ERP system for the Retail Shop based on Java. This covers various java 
+                    programming concepts including JDBC and Swing.
+                </div>
+            </li>
+            <li>NetMix: Video Streaming Platform
+                <br>
+                <br>
+                <div class="details">
+                    This is a prototype for an Video Streaming Platform which mainly focuses on application of Design 
+                    Patterns. This system employs Decorator, State and Singleton Pattern for video streaming platform.
+                    This covers various java programming concepts including JavaFX and Swing.
+                </div>
+            </li>
+            <li>Amazon Prime Video Automation
+                <br>
+                <br>
+                <div class="details">
+                    This is an automation of Amazon Prime Video using Selenium Web Driver. This focuses on testing the 
+                    functionality of Prime Video.
+                </div>
+            </li>
+            <li>Java Practice Programs
+                <br>
+                <br>
+                <div class="details">
+                    This includes various programming problems and respective solutions covering various programming concepts.
+                </div>
+            </li>
+            <hr>
+            <div class="description">
+                <h3><u><i>Desktop Games</i></u></h3>
+                <p>
+                    These are the desktop games that are created using Unity game engine. This covers basic gaming concepts from simple
+                    physics to advanced animation and sound effects.
+                </p>
+            </div>
+            <li>Flappy Bird - 2D
+                <br>
+                <br>
+                <div class="details">
+                    This is a basic 2D desktop game that is created using Unity Game Engine. This covers various gaming concepts
+                    from rendering to spawning to collision detection. It also comprises of SFX.
+                </div>
+            </li>
+            <li>Bouncing Ball - 3D
+                <br>
+                <br>
+                <div class="details">
+                    This is a 3D desktop game that is created using Unity Game Engine. This covers various gaming concepts
+                    from rendering to spawning to collision detection. It comprises of around 20 levels with increasing 
+                    difficulty.
+                </div>
+            </li>
+            <li>Battle of Warrior - 2D Platformer
+                <br>
+                <br>
+                <div class="details">
+                    This is a basic 2D desktop game that is created using Unity Game Engine. This covers various gaming concepts
+                    from rendering to spawning to collision detection. It also has some basic animations of performing various 
+                    character actions.
+                </div>
+            </li>
+            <li>Real Racing - 3D
+                <br>
+                <br>
+                <div class="details">
+                    This game is still under development. It is a 3D game based on racing.
+                </div>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
