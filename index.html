@@ -8,26 +8,30 @@
     <style>
         *
         {
-            background-color: black;
+            /* background-color: black; */
+            background-color: rgb(86, 88, 90);
             margin: 0;
         } 
         #intro
         {
-            background-color: rgb(4, 207, 207);
+            background-color: rgb(52, 53, 53);
+            height: fit-content;
         }
         #greet
         {
-            background-color: rgb(4, 207, 207);
+            background-color: rgb(52, 53, 53);
+            color: white;
         }
         button
         {
-            background-color: rgb(4, 207, 207);
+            background-color: rgb(52, 53, 53);
+            color: whitesmoke;
             font-family:'Times New Roman', Times, serif;
             margin-left: 200px;
             margin-top: 20px;
             font-size: 26px;
             border-radius: 20px;
-            border-color:  rgb(4, 207, 207) ;
+            border-color:  rgb(52, 53, 53);
             padding: auto;
         }
         #name
@@ -55,8 +59,11 @@
             width: 450px;
             height: 450px;
             margin-left: 50px;
-            margin-top: 50px;
-            border-radius: 250px; 
+            margin-top: 10px;
+            border-radius: 250px;
+            border-color: gray;
+            border-style: double;
+            border-width: 16px; 
         }
         #footer
         {
@@ -73,10 +80,10 @@
 
 </head>
 <body>
-    <header id="intro">
+    <header id="intro" height = f>
         <h1 id="greet" align="center">Hello Everyone!<br>Welcome to my Personal Portfolio</h1>
         <button>Home</button>
-        <button>Skills</button>
+        <button onclick="navigate('skills.html')">Skills</button>
         <button onclick="navigate('projects.html')">Projects</button>
         <button>Contact Me</button>
         <!-- <a href="personalPortfolio.html">Home</a>
