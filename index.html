@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -86,17 +86,14 @@
         <button onclick="navigate('skills.html')">Skills</button>
         <button onclick="navigate('projects.html')">Projects</button>
         <button>Contact Me</button>
-        <!-- <a href="personalPortfolio.html">Home</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact Us</a> -->
     </header>
     
     <section id="main">
         <div>
             <h1 id="name">Affan Rahmathullah</h1>
-            <p id="about">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, accusantium similique tempore cum harum rerum nisi est commodi dolores aliquid quo placeat, suscipit beatae voluptatum. Hic possimus, dolorem consectetur in facere, deserunt tempora culpa nulla dignissimos voluptatum voluptatibus nisi quibusdam soluta ex. Delectus quisquam est maiores, optio sed, corrupti eveniet ab dolor amet dolores quia qui fugiat quasi ullam sequi magnam ex eligendi vitae blanditiis repudiandae adipisci inventore nostrum consectetur. Ullam natus animi eligendi consequatur est incidunt minima ab temporibus architecto eius nostrum repellendus perspiciatis totam nemo, mollitia modi, ea impedit numquam tempore nisi veniam, ducimus iure maiores obcaecati. Laudantium neque deserunt, nesciunt, debitis veritatis, repellendus exercitationem culpa sed non accusamus numquam commodi quaerat? Corporis dolores quaerat modi, quis molestias ipsa doloribus nisi? Quos, commodi odio. Corporis quidem illo similique possimus dolore eos quam, impedit numquam eveniet reprehenderit officia non ullam tempora enim nesciunt tenetur. Ipsam libero amet non quasi corporis eum voluptate perferendis nobis. Corrupti laudantium dicta deleniti obcaecati, quaerat ratione dignissimos iusto dolores nostrum blanditiis assumenda earum vero repudiandae impedit. Similique error dolores, repudiandae sunt voluptas harum est ipsum! Quod, eos amet architecto nulla iste magni. Ipsum ipsam rem veniam corporis fugit, suscipit eos quidem. Odit, recusandae soluta.</p>
-        </div>
+            <p id="about">Motivated and detail-oriented 3rd year Software Engineering student at Vellore Institute of Technology,Vellore, 
+                seeking an opportunity to apply my skills in App Devolopment,Machine Learning and Web Development. 
+                Passionate about building impactful tech solutions and eager to contribute to innovative projects</div>
         <div>
             <img id = "image" src="aff1.jpg" alt="Error Occured...">
         </div>
@@ -105,4 +102,173 @@
     <footer id="footer">
         <p>&copy; 2024 Affan Rahmathullah. All Rights Reserved.</p>
     </footer>
+</body> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: rgb(86, 88, 90);
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        /* Intro Section */
+        #intro {
+            background-color: rgb(52, 53, 53);
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        #greet {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        button {
+            background-color: rgb(52, 53, 53);
+            color: whitesmoke;
+            font-size: 1.2em;
+            border-radius: 20px;
+            border: none;
+            padding: 15px 25px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(70, 71, 73);
+        }
+
+        /* Main Section */
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            padding: 30px;
+            gap: 50px;
+        }
+
+        #name {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #about {
+            font-size: 1.2em;
+            width: 60%;
+            text-align: justify;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        #image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid gray;
+            object-fit: cover;
+        }
+
+        /* Footer */
+        #footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgb(52, 53, 53);
+        }
+
+        #footer p {
+            font-size: 1em;
+            color: #bbb;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #main {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #about {
+                width: 80%;
+                margin-top: 20px;
+            }
+
+            button {
+                font-size: 1em;
+                padding: 10px 15px;
+            }
+
+            #image {
+                width: 200px;
+                height: 200px;
+            }
+
+            #name {
+                font-size: 2em;
+            }
+
+            #greet {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+
+    <script>
+        function navigate(page) {
+            window.location.href = page;
+        }
+    </script>
+</head>
+
+<body>
+
+    <header id="intro">
+        <h1 id="greet">Hi, I'm Affan Rahmathullah,<br>Your Future Software Engineer and Problem Solver</h1>
+        <div>
+            <button onclick="navigate('index.html')">Home</button>
+            <button onclick="navigate('skills.html')">Skills</button>
+            <button onclick="navigate('projects.html')">Projects</button>
+            <button onclick="navigate('contact.html')">Contact Me</button>
+        </div>
+    </header>
+
+    <section id="main">
+        <div>
+            <h1 id="name">Affan Rahmathullah</h1>
+            <p id="about">Motivated and detail-oriented 3rd year Software Engineering student at Vellore Institute of Technology, Vellore. 
+                Seeking an opportunity to apply my skills in App Development, Machine Learning, and Web Development. 
+                Passionate about building impactful tech solutions and eager to contribute to innovative projects.</p>
+        </div>
+        <div>
+            <img id="image" src="aff1.jpg" alt="Affan's Image">
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; 2024 Affan Rahmathullah. All Rights Reserved.</p>
+    </footer>
 </body>
+
+</html>

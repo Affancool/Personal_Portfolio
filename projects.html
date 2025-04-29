@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -73,10 +73,7 @@
         <button onclick="navigate('skills.html')">Skills</button>
         <button onclick="navigate('projects.html')">Projects</button>
         <button>Contact Me</button>
-        <!-- <a href="personalPortfolio.html">Home</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact Us</a> -->
+
     </header>
     <div id="page">
         <ol float="left" id="names" onclick="displayDescription()">
@@ -231,6 +228,277 @@
             <li>Real Racing - 3D
                 <br>
                 <br>
+                <div class="details">
+                    This game is still under development. It is a 3D game based on racing.
+                </div>
+            </li>
+        </ol>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(86, 88, 90);
+            color: white;
+        }
+        #intro {
+            background-color: rgb(52, 53, 53);
+            text-align: center;
+            padding: 20px;
+        }
+        #greet {
+            color: white;
+        }
+        button {
+            background-color: rgb(52, 53, 53);
+            color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 10px 15px;
+            font-size: 20px;
+            border-radius: 20px;
+            border: 2px solid rgb(52, 53, 53);
+            padding: 10px 25px;
+        }
+        button:hover {
+            background-color: rgb(34, 34, 34);
+            cursor: pointer;
+        }
+        ol {
+            padding: 20px;
+            margin: 0 20px;
+        }
+        h3, p {
+            margin-bottom: 10px;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
+        li {
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        li:hover {
+            color: #f1c40f;
+            cursor: pointer;
+        }
+        .description {
+            margin: 20px 0;
+        }
+        .description h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .description p {
+            font-size: 18px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            button {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+            ol {
+                padding: 15px;
+            }
+            li {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #greet {
+                font-size: 24px;
+            }
+            button {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+            li {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function navigate(page){
+            window.location.href = page;
+        }
+
+        function displayDescription(event) {
+            event.stopPropagation();
+            // Get all details divs and hide them
+            const allDetails = document.querySelectorAll('.details');
+            allDetails.forEach(detail => detail.style.display = 'none');
+
+            // Toggle display of the clicked project's description
+            const currentDetails = event.target.querySelector('.details');
+            if (currentDetails) {
+                const isVisible = currentDetails.style.display === 'block';
+                currentDetails.style.display = isVisible ? 'none' : 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header id="intro">
+        <h1 id="greet">Hello Everyone!<br>Welcome to my Personal Portfolio</h1>
+        <button onclick="navigate('index.html')">Home</button>
+        <button onclick="navigate('skills.html')">Skills</button>
+        <button onclick="navigate('projects.html')">Projects</button>
+        <button>Contact Me</button>
+    </header>
+    <div id="page">
+        <ol id="names" onclick="displayDescription(event)">
+            <div class="description">
+                <h3><u><i>Android Based Projects</i></u></h3>
+                <p>These are some of my apps which are based on Android. This includes some of the apps that are requested 
+                    by the users and one app is based on Machine Learning, while some of them are simple Android based Games. These 
+                    games cover a wide range of programming concepts from simple Java programming to advanced Java features.
+                </p>
+            </div>
+            <li>Hostel Assist
+                <div class="details">
+                    This is an Android Application that is developed to address the grievances of hostel students. Students can
+                    raise their complaints to their respective warden using this app. Wardens can address the complaints by taking 
+                    appropriate action. It uses Google Firebase for its backend management.
+                </div>
+            </li>
+            <li>Heart Disease Detector
+                <div class="details">
+                    This is an Android application that collects data from users and determines whether the user has Coronary
+                    Disease. This app employs a Machine Learning model which was trained to predict heart disease using 
+                    an existing dataset. The model was deployed to an Android-based app using a TensorFlow Keras Model.
+                </div>
+            </li>
+            <li>Age and Gender Predictor
+                <div class="details">
+                    This is an Android application that predicts the Age group of a user and their Gender based on user image.
+                    This app employs a Deep Learning model which was trained to predict Age and Gender using 
+                    Facial Recognition. The model was deployed to an Android-based app using a TensorFlow Keras Model.
+                </div>
+            </li>
+            <li>GoT Character Predictor
+                <div class="details">
+                    This is an Android application that can be used to predict the character from Game of Thrones web series.
+                    It accepts an input image from user and predicts which character it is. This app employs a Machine Learning model 
+                    which was trained to predict GoT character using an existing image dataset. The model was deployed to an Android-based app using a TensorFlow Keras Model.
+                </div>
+            </li>
+            <li>GoT Akinator
+                <div class="details">
+                    This is an Android application that predicts the character from GoT which you are thinking. Think of it as an Akinator
+                    specifically for Game of Thrones characters. It asks set of questions and based on response provided by user, it predicts 
+                    the character. It follows Tree Traversal concept for prediction.
+            </li>
+            <li>Hangman Game
+                <div class="details">
+                    This is an android game that covers a wide range of programming concepts. This game is developed using Android 
+                    Studio and it includes various modes for playing.
+                </div>
+            </li>
+            <li>Guess the Song - Game
+                <div class="details">
+                    This is an android game that covers the concepts of audio and video playing in Android.
+                </div>
+            </li>
+            <li>Haunted Mansion - Interactive Story
+                <div class="details">
+                    Delve into this interactive story gaming where the outcome can vary tremendously based on your choices.
+                    Join this journey to uncover the secret behind the Haunted Mansion.
+                </div>
+            </li>
+            <li>Tic Tac Toe Game
+                <div class="details">
+                    This is a simple two-player game that covers basic programming skills.
+                </div>
+            </li>
+            <hr>
+            <div class="description">
+                <h3><u><i>Java Based Projects</i></u></h3>
+                <p>These are the projects that are created using Java Swing, AWT, and JavaFX. This includes prototypes of several
+                    web-based systems. It also includes a prototype for an ERP system. One project also covers the application of design
+                    patterns for a particular application. This also covers test automation using Selenium Web Drivers and it also 
+                    contains some basic to advanced programming problems.
+                </p>
+            </div>
+            <li>Travels and Tourism Management
+                <div class="details">
+                    This is a prototype for managing the travels and tourism management based on Java. This covers various java 
+                    programming concepts including JDBC and Swing.
+                </div>
+            </li>
+            <li>Eco-Collect: Online Scrap Collection Platform
+                <div class="details">
+                    This is a prototype for an Online Scrap Collection Platform based on Java. This covers various java 
+                    programming concepts including JDBC and Swing.
+                </div>
+            </li>
+            <li>Inventory Management System
+                <div class="details">
+                    This is a prototype for an ERP system for the Retail Shop based on Java. This covers various java 
+                    programming concepts including JDBC and Swing.
+                </div>
+            </li>
+            <li>NetMix: Video Streaming Platform
+                <div class="details">
+                    This is a prototype for a Video Streaming Platform which mainly focuses on the application of Design 
+                    Patterns. This system employs Decorator, State, and Singleton Pattern for video streaming platform.
+                    This covers various java programming concepts including JavaFX and Swing.
+                </div>
+            </li>
+            <li>Amazon Prime Video Automation
+                <div class="details">
+                    This is an automation of Amazon Prime Video using Selenium Web Driver. This focuses on testing the 
+                    functionality of Prime Video.
+                </div>
+            </li>
+            <li>Java Practice Programs
+                <div class="details">
+                    This includes various programming problems and respective solutions covering various programming concepts.
+                </div>
+            </li>
+            <hr>
+            <div class="description">
+                <h3><u><i>Desktop Games</i></u></h3>
+                <p>These are the desktop games that are created using Unity game engine. This covers basic gaming concepts from simple
+                    physics to advanced animation and sound effects.
+                </p>
+            </div>
+            <li>Flappy Bird - 2D
+                <div class="details">
+                    This is a basic 2D desktop game that is created using Unity Game Engine. This covers various gaming concepts
+                    from rendering to spawning to collision detection. It also comprises of SFX.
+                </div>
+            </li>
+            <li>Bouncing Ball - 3D
+                <div class="details">
+                    This is a 3D desktop game that is created using Unity Game Engine. This covers various gaming concepts
+                    from rendering to spawning to collision detection. It comprises around 20 levels with increasing 
+                    difficulty.
+                </div>
+            </li>
+            <li>Battle of Warrior - 2D Platformer
+                <div class="details">
+                    This is a basic 2D desktop game that is created using Unity Game Engine. This covers various gaming concepts
+                    from rendering to spawning to collision detection. It also has some basic animations of performing various 
+                    character actions.
+                </div>
+            </li>
+            <li>Real Racing - 3D
                 <div class="details">
                     This game is still under development. It is a 3D game based on racing.
                 </div>
